@@ -17,13 +17,15 @@ function App() {
       <Routes>
           <Route path="/" element={<AppLayout />} >
               <Route index element={<HomePage />} />
-              <Route path="movies" >
+              <Route path="/teams" >
                   <Route index element={<MoviePage />} />
-                  <Route path=":id" element={<MovieDetail />}/> {/* user 화면 */} /
+                  <Route path=":teamId" element={<MovieDetail />} />
               </Route>
+              {/*<Route path="/movie" element={<MoviePage />} />*/}
+              {/*<Route path="/movie/:id" element={<MovieDetail />} />*/}
           </Route>
 
-          <Route path="/*" element={<NotFoundPage />} />
+          <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );
