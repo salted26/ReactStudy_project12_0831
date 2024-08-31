@@ -22,7 +22,7 @@ function App() {
                 <Route path=":id" element={<MovieDetail />}/> {/* user 화면 */} /
               </Route>
           </Route>
-          <Route path="/*" element={<NotFoundPage />} />
+          <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );
