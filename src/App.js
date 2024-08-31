@@ -17,9 +17,7 @@ function App() {
       <Routes>
           <Route path="/" element={<AppLayout />} >
               <Route index element={<HomePage />} />
-
-              <Route path="/movies/*">
-                <Route index element={<MoviePage />} />
+              <Route path="movies" element={<MoviePage />} >
                 <Route path=":id" element={<MovieDetail />}/> {/* user 화면 */} /
               </Route>
 
