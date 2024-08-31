@@ -17,11 +17,14 @@ function App() {
       <Routes>
           <Route path="/" element={<AppLayout />} >
               <Route index element={<HomePage />} />
-              <Route path="movies">
+
+              <Route path="/movies">
                 <Route index element={<MoviePage />} />
                 <Route path=":id" element={<MovieDetail />}/> {/* user 화면 */} /
               </Route>
+
           </Route>
+
           <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
